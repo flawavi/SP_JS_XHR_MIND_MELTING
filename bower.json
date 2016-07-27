@@ -1,0 +1,20 @@
+{
+  "name": "Single-page-applications",
+  "authors": [
+    "Fletcher Watson <fbwthe6@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
