@@ -1,13 +1,13 @@
 var predator = (function () {
-  var _carnivores = []
-  var _herbivores = []
+  var carnivores = []
+  var herbivores = []
 
   return {
     getCarnivores: function (callback) {
-      var xhr = XMLHTttpRequest()
+      var xhr = new XMLHttpRequest()
       xhr.open('GET', 'carnivores.json')
-      xhr.addEventListener('load', function() {
-        carnivores = JSON.parse(xhr.responseText)
+      xhr.addEventListener('load', function(evt) {
+        carnivores = JSON.parse(evt.target.responseText)
         callback(carnivores)
       })
       xhr.send()
@@ -15,13 +15,13 @@ var predator = (function () {
 
     },
     getHerbivores: function (callback) {
-      var xhr = XMLHTttpRequest()
+      var xhr = new XMLHttpRequest()
       xhr.open('GET', 'herbivores.json')
-      xhr.addEventListener('load', function() {
-        herbivores = JSON.parse(xhr.responseText)
+      xhr.addEventListener('load', function(evt) {
+        herbivores = JSON.parse(evt.target.responseText)
         callback(herbivores)
       })
       xhr.send()
+    }
   }
-
 }())
